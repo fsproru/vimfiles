@@ -2,6 +2,8 @@
 " Vim Config
 " ----------
 "
+" TL;DR
+" Run install.sh to symlink this file to your home directory (e.g. $HOME/.vimrc)
 "
 " How this works:
 "
