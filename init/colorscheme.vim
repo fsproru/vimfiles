@@ -5,4 +5,4 @@
 "  endif
 
 set background=dark
-colorscheme solarized
+silent! colorscheme solarized
