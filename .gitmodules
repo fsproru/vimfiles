@@ -1,6 +1,3 @@
-[submodule "bundle/vim-colors-solarized"]
-	path = bundle/vim-colors-solarized
-	url = git://github.com/altercation/vim-colors-solarized.git
 [submodule "bundle/vim-fugitive"]
 	path = bundle/vim-fugitive
 	url = git@github.com:tpope/vim-fugitive.git
@@ -82,3 +79,6 @@
 [submodule "bundle/l9"]
 	path = bundle/l9
 	url = git://github.com/vim-scripts/L9.git
+[submodule "bundle/vundle"]
+	path = bundle/vundle
+	url = git://github.com/gmarik/vundle.git

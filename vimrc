@@ -12,28 +12,20 @@
 " merge between branches and repos.
 "
 " Please do not add configuration to this file, unless it *really* needs to
-" come first or last, like Pathogen and sourcing the machine-local config.
-" Instead, add it to one of the files in .vim/init, or create a new one.
-
-
-" Pathogen (This must happen first.)
-" --------
-
-filetype off                    " Avoid a Vim/Pathogen bug
-call pathogen#helptags()
-call pathogen#runtime_append_all_bundles()
+" come first or last, like vundle. Instead, add it to one of the files in
+" .vim/init, or create a new one.
 
 set nocompatible                " Don't maintain compatibility with vi
-syntax on                       " Highlight known syntaxes
+filetype off
+syntax on
+
+" Vundle stuff
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'altercation/vim-colors-solarized.git'
+
 filetype plugin indent on
 
-
 " Source initialization files
-" ---------------------------
-
 runtime! init/**.vim
-
-
-" Machine-local vim settings - keep this at the end
-" --------------------------
-silent! source ~/.vimrc.local
