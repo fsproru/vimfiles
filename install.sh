@@ -7,8 +7,5 @@ if [[ -e $HOME/.vimrc || -e $HOME/.vim ]]; then
 else
   ln -s $PWD/vimrc $HOME/.vimrc
   ln -s $PWD $HOME/.vim
-  # echo rm $HOME/.vim/vimrc $HOME/.vim/install.sh $HOME/.vim/README.md
-  # echo mkdir -p $HOME/.vim/bundle # might not need it
-  # echo # Install bundle using vundle
   vim +BundleInstall +qall
 fi
