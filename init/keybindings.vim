@@ -20,16 +20,8 @@ map <D-<>       :tabedit ~/.vimrc<CR>
 " Reload .vimrc
 map <leader>rv  :source ~/.vimrc<CR>
 
-" Undo/redo - Doesn't MacVim already have this?
-map <D-z>       :earlier 1<CR>
-map <D-Z>       :later 1<CR>
-
 " Auto-indent whole file
 map <silent> <F8> mzgg=G'z :delmarks z<CR>:echo "Reformatted."<CR>
-
-" Fast scrolling
-nnoremap <C-e>  3<C-e>
-nnoremap <C-y>  3<C-y>
 
 " File tree browser
 map \           :NERDTreeToggle<CR>
@@ -37,27 +29,16 @@ map \           :NERDTreeToggle<CR>
 " File tree browser showing current file - pipe (shift-backslash)
 map \|          :NERDTreeFind<CR>
 
-"indent/unindent visual mode selection with tab/shift+tab
-vmap <tab> >gv
-vmap <s-tab> <gv
-
 " FuzzyFinder and switchback commands
 map <leader>F   :FufRenewCache<CR>:FufFile **/<CR>
 map <Leader>f   :FufFile **/<CR>
 map <Leader>b   :FufBuffer<CR>
-
-" Git blame
-map <leader>g   :Gblame<CR>
 
 " Comment/uncomment lines
 map <leader>/   <plug>NERDCommenterToggle
 
 " In command-line mode, <C-A> should go to the front of the line, as in bash.
 cmap <C-A> <C-B>
-
-" Copy current file path to system pasteboard
-map <silent> <D-C> :let @* = expand("%")<CR>:echo "Copied: ".expand("%")<CR>
-map <leader>C :let @* = expand("%").":".line(".")<CR>:echo "Copied: ".expand("%").":".line(".")<CR>
 
 " Disable middle mouse button, F1
 map <MiddleMouse>   <Nop>
@@ -72,9 +53,6 @@ map <Leader><Leader> :!
 map <leader>a :call AckGrep()<CR>
 " AckVisual current selection
 vmap <leader>a :call AckVisual()<CR>
-
-" Recalculate diff when it gets messed up.
-nmap du :diffupdate<CR>
 
 " Show Tags
 map <Leader>l <ESC>:Tlist<RETURN> " (normal mode) brings up the tag list
