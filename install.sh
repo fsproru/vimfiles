@@ -13,8 +13,8 @@ else
   cd -
 
   echo === Linking vim directories
-  ln -s $current_dir/vimrc $HOME/.vimrc
-  ln -s $current_dir $HOME/.vim
+  ln -s $PWD/$current_dir/vimrc $HOME/.vimrc
+  ln -s $PWD/$current_dir $HOME/.vim
 
   echo === Vundling
   vim +BundleInstall +qall
