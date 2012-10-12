@@ -5,11 +5,15 @@ Portable vim configuration
 ## Install
 ```
 git clone git://github.com/fsproru/vimfiles ~/.vimfiles
-~/.vimfiles/install.sh
+cd ~/.vimfiles
+./install.sh
 ```
 
 ## Uninstall
-`~/.vimfiles/uninstall.sh`
+```
+cd ~/.vimfiles
+./uninstall.sh
+```
 
 ## Inspired by
  - https://github.com/finack/dotfiles
