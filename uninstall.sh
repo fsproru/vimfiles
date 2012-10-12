@@ -3,12 +3,12 @@
 if [[ -e $HOME/.vimrc || -e $HOME/.vim ]]; then
 
   # asking for confirmation
-  while true
-  do
-    echo "I'll delete $HOME/.vim and $HOME/.vimrc\n\
+  echo "I'll delete $HOME/.vim and $HOME/.vimrc\n\
 Hope you don't have anything important there.\n\n\
 Sounds good? (yes/no)"
 
+  while true
+  do
     read CONFIRM
     case $CONFIRM in
       y|Y|YES|yes|Yes) break ;;
@@ -16,7 +16,7 @@ Sounds good? (yes/no)"
         echo Aborting - you entered $CONFIRM
         exit
         ;;
-      *) echo Please type yes or no
+      *) echo Please type \"yes\" or \"no\"
     esac
   done
 
