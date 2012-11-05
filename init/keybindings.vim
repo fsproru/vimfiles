@@ -30,9 +30,10 @@ map \           :NERDTreeToggle<CR>
 map \|          :NERDTreeFind<CR>
 
 " FuzzyFinder and switchback commands
-map <leader>F   :FufRenewCache<CR>:FufFile **/<CR>
-map <Leader>f   :FufFile **/<CR>
+map <leader>F   :FufRenewCache<CR>:FufCoverageFile<CR>
+map <Leader>f   :FufCoverageFile<CR>
 map <Leader>b   :FufBuffer<CR>
+map <Leader>t   :FufTag<CR>
 
 " Comment/uncomment lines
 map <leader>/   <plug>NERDCommenterToggle
