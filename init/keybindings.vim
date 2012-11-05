@@ -71,7 +71,7 @@ map <Leader>rat <Plug>RubyFileRun
 map <Leader>rlt <Plug>RubyTestRunLast
 
 " Reload Ctags
-map <silent> <Leader>ct :!echo "Updating ctags..." && ctags --extra=+f --exclude=.git --exclude=log --exclude=tmp -R * $GEM_HOME/gems/* 2> /dev/null &<CR><CR>
+map <silent> <Leader>ct :!echo "Updating ctags..." && ctags --extra=+f --exclude=.git --exclude=log --exclude=tmp -R * vendor/bundle/gems/* 2> /dev/null & <CR><CR>
 
 " Horizontal block movement
 vmap > >gv
