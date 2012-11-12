@@ -26,11 +26,10 @@ map \           :NERDTreeToggle<CR>
 " File tree browser showing current file - pipe (shift-backslash)
 map \|          :NERDTreeFind<CR>
 
-" FuzzyFinder and switchback commands
-map <leader>F   :FufRenewCache<CR>:FufCoverageFile<CR>
-map <Leader>f   :FufCoverageFile<CR>
-map <Leader>b   :FufBuffer<CR>
-map <Leader>t   :FufTag<CR>
+" Find File/Buffer/Tag
+map <leader>F   :CtrlPClearCache<CR>:CtrlP<CR>
+map <Leader>f   :CtrlP<CR>
+map <Leader>b   :CtrlPBuffer<CR>
 
 " Comment/uncomment lines
 map <leader>/   <plug>NERDCommenterToggle
@@ -63,9 +62,8 @@ vmap { [egv
 vmap } ]egv
 
 " RubyTest
-map <Leader>rt <Plug>RubyTestRun<Up>
-map <Leader>rat <Plug>RubyFileRun
-map <Leader>rlt <Plug>RubyTestRunLast
+map <Leader>t :VroomRunNearestTest<CR>
+map <Leader>T :VroomRunTestFile<CR>
 
 " Reload Ctags
 map <silent> <Leader>ct :!echo "Updating ctags..." && ctags --extra=+f --exclude=.git --exclude=log --exclude=tmp -R * vendor/bundle/gems/* 2> /dev/null & <CR><CR>

@@ -49,8 +49,10 @@ Bundle 'msanders/snipmate.vim.git'
 Bundle 'kchmck/vim-coffee-script.git'
 Bundle 'bbommarito/vim-slim.git'
 Bundle 'Lokaltog/vim-powerline.git'
-Bundle 'vim-scripts/FuzzyFinder.git'
-Bundle 'vim-scripts/L9.git'
+Bundle 'tsaleh/vim-matchit.git'
+Bundle 'kien/ctrlp.vim'
+Bundle 'benmills/vimux'
+Bundle 'skalnik/vim-vroom'
 
 filetype plugin indent on
 
