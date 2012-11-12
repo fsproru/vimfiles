@@ -14,9 +14,6 @@ vmap <leader>s  :s/
 " Split screen
 map <leader>v   :vsp<CR>
 
-" Open .vimrc file in new tab. Think Command + , [Preferences...] but with Shift.
-map <D-<>       :tabedit ~/.vimrc<CR>
-
 " Reload .vimrc
 map <leader>rv  :source ~/.vimrc<CR>
 
