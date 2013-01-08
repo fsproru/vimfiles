@@ -137,3 +137,6 @@ endif
 
 " Use shell in vim (sources rvm)
   set shell=/bin/sh
+
+" Treat .jst as html
+  au BufNewFile,BufRead *.ejs set filetype=html
