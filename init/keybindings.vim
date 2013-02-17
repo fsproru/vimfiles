@@ -61,12 +61,9 @@ nmap } ]e
 vmap { [egv
 vmap } ]egv
 
-" RubyTest
+" Run tests
 map <Leader>t :VroomRunNearestTest<CR>
 map <Leader>T :VroomRunTestFile<CR>
-
-" Reload Ctags
-map <silent> <Leader>ct :!echo "Updating ctags..." && ctags --extra=+f --exclude=.git --exclude=log --exclude=tmp -R * vendor/bundle/gems/* 2> /dev/null & <CR><CR>
 
 " Horizontal block movement
 vmap > >gv
