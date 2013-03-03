@@ -138,5 +138,6 @@ endif
 " Use shell in vim (sources rvm)
   set shell=/bin/sh
 
-" Treat .jst as html
+" Set filetypes for unusual files
   au BufNewFile,BufRead *.ejs set filetype=html
+  au BufNewFile,BufRead {Capfile,Gemfile,Rakefile,config.ru,.irbrc} set ft=ruby
