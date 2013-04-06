@@ -5,19 +5,16 @@
   set guioptions-=rL              " Remove scrollbars
   set notimeout                   " No command timeout
   set showcmd                     " Show typed command prefixes while waiting for operator
-  set mouse=a                     " Use mouse support in XTerm/iTerm.
 
 " General Options
-  set number                     " Line numbers
-  set nowrap                     " No wrapping
   set backspace=indent,eol,start " Let backspace work over anything.
-  set clipboard=                 " turns out I do like is sharing windows clipboard
+  set clipboard=                 " use system clipboard
   set ffs=unix,mac               " support these in this order
   filetype on                    " detect the type of file
   filetype plugin on             " load filetype plugins
   set viminfo+=!                 " make sure it can save viminfo
 
-set list                         " Show whitespace
+  set list                       " Show whitespace
 if has("gui_running")
   set listchars=trail:·
 else
@@ -30,17 +27,12 @@ endif
   set hlsearch                                       " highlight searched for phrases
   set incsearch                                      " highlight as you type you search phrase
   set history=1024                                   " History size
-  set listchars=tab:\\.,trail:.,extends:>,precedes:< " what to show when I hit :set list
-  set list
   set so=5                                           " Keep x lines (top/bottom) for scope
   set novisualbell                                   " don't blink
   set noerrorbells                                   " no noises
-  " Statusline from ~1994 => 2011
-  " set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%05l,%04v][%LL:%p%%]
 
   set statusline=[%n]                             " buffer number
   set statusline+=\ %<%.99f                       " tail of the filename
-                                                  " set statusline+=\ [%{strlen(&fenc)?&fenc:'none'}, " file encoding
   set statusline+=\ %m                            " modified flag
   set statusline+=[
   set statusline+=%{&ff},                         " file format
@@ -53,8 +45,7 @@ endif
   set statusline+=\ %c%VC                         " cursor column
   set statusline+=\ %P                            " percent through file
 
-
-  set laststatus=2 " always show the status line
+  set laststatus=2                " always show the status line
   set hidden                      " Allow hidden, unsaved buffers
   set splitright                  " Add new windows towards the right
   set splitbelow                  " ... and bottom
@@ -70,6 +61,7 @@ endif
   set shiftwidth=2  " unify
   set expandtab     " Give me spaces or give me death
   set nowrap        " do not wrap lines
+  set nrformats=    " treat all numerals as decimal
 
 " Folding
   set nofoldenable      " Turn off folding
@@ -79,13 +71,10 @@ endif
   set foldopen-=undo    " don't open folds when you undo stuff
 
 " Files/Backups
-  "set backup " make backup file
-  "set backupdir=$VIM\vimfiles\backup " where to put backup file
-  "set directory=$VIM\vimfiles\temp " directory is the directory for temp file
-  "set makeef=error.err " When using make, where should it dump the file
   set autowrite                     " Save the file when shell/cmd are run
   set autoread
-  set wildmode=list:longest         " activate tab auto-complete for file paths
+  set wildmenu
+  set wildmode=full                 " zsh style command mode completion
   set autoread                      " No prompt for file changes outside Vim
   set swapfile                      " Keep swapfiles
   set wildignore+=tags              " Ignore tags when globbing.
@@ -100,22 +89,19 @@ endif
 
 " Vim UI
   set lsp=0                            " space it out a little more (easier to read)
-  set wildmenu                         " turn on wild menu
+  " set wildmenu                         " turn on wild menu
   set ruler                            " Always show current positions along the bottom
   set cmdheight=2                      " the command bar is 2 high
   set number                           " turn on line numbers
   set numberwidth=3
   set cpoptions+=n                     " show wrapped lines in the line number gutter
                                        " Hitting ctrl-n ctrl-n whill toggle the display of numbers
-  :nmap <C-N><C-N> :set invnumber<CR>
   set lz                               " do not redraw while running macros (much faster) (LazyRedraw)
   set hid                              " you can change buffer without saving
-                                       " set backspace=2                                               " make backspace work normal
   set whichwrap+=<,>,h,l               " backspace and cursor keys wrap to
   set mouse=a                          " use mouse everywhere
   set shortmess=atI                    " shortens messages to avoid 'press a key' prompt
   set report=0                         " tell us when anything is changed via :...
-  set noerrorbells                     " don't make noise
                                        " make the splitters between windows be blank
   set fillchars=vert:\ ,stl:\ ,stlnc:\
   set scrolloff=3                      " Scroll when the cursor is 3 lines from edge
