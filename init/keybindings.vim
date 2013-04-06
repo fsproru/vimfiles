@@ -7,15 +7,8 @@ let maplocalleader = ";"
 " Make Y consistent with D and C
 map Y           y$
 
-" Search
-nmap <leader>s  :%s/
-vmap <leader>s  :s/
-
 " Split screen
 map <leader>v   :vsp<CR>
-
-" Reload .vimrc
-map <leader>rv  :source ~/.vimrc<CR>
 
 " Auto-indent whole file
 map <silent> <F8> mzgg=G'z :delmarks z<CR>:echo "Reformatted."<CR>
@@ -43,16 +36,10 @@ imap <MiddleMouse>  <Nop>
 map <F1>            <Nop>
 imap <F1>           <Nop>
 
-" Easy access to the shell
-map <Leader><Leader> :!
-
 " AckGrep current word
 map <leader>a :call AckGrep()<CR>
 " AckVisual current selection
 vmap <leader>a :call AckVisual()<CR>
-
-" Show Tags
-map <Leader>l <ESC>:Tlist<RETURN> " (normal mode) brings up the tag list
 
 " Bubble single lines
 nmap { [e
@@ -68,13 +55,3 @@ map <Leader>T :VroomRunTestFile<CR>
 " Horizontal block movement
 vmap > >gv
 vmap < <gv
-
-" vim-chef
-map <Leader>cf :<C-u>ChefFindAny<CR>
-map <Leader>csf :<C-u>ChefFindAnySplit<CR>
-map <Leader>cvf :<C-u>ChefFindAnyVsplit<CR>
-
-" Save on CTRL-s
-nmap <C-s> :w<CR>
-imap <C-s> <Esc>:w<CR>
-vmap <C-s> <Esc>:w<CR>gv
