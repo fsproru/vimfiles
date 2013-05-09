@@ -25,6 +25,7 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 Bundle 'altercation/vim-colors-solarized.git'
+Bundle 'nelstrom/vim-qargs.git'
 Bundle 'tpope/vim-fugitive.git'
 Bundle 'tpope/vim-cucumber.git'
 Bundle 'tpope/vim-haml.git'
