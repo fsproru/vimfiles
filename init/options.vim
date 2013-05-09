@@ -15,15 +15,10 @@
   set viminfo+=!                 " make sure it can save viminfo
 
   set list                       " Show whitespace
-if has("gui_running")
   set listchars=trail:·
-else
-  set listchars=trail:~
-endif
 
 " Visual Cues
   set showmatch                                      " show matching brackets
-  set mat=5                                          " how many tenths of a second to blink matching brackets for
   set hlsearch                                       " highlight searched for phrases
   set incsearch                                      " highlight as you type you search phrase
   set history=1024                                   " History size
@@ -89,7 +84,6 @@ endif
 
 " Vim UI
   set lsp=0                            " space it out a little more (easier to read)
-  " set wildmenu                         " turn on wild menu
   set ruler                            " Always show current positions along the bottom
   set cmdheight=2                      " the command bar is 2 high
   set number                           " turn on line numbers
@@ -119,7 +113,7 @@ endif
   endif
 
 " Case insensitive search by default
-  set ignorecase
+  set smartcase
 
 " Use shell in vim (sources rvm)
   set shell=/bin/sh
